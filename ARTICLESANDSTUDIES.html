@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Microdosing Research & Commentary</title>
+<style>
+  /* ===== microDOS(2) dark UI — self‑contained, no images/CDNs ===== */
+  :root{
+    --slate-900:#0a0514; --slate-850:#150f24; --slate-800:#150f24; --slate-750:#1f1a2e;
+    --slate-700:#1a1329; --slate-600:#475569; --slate-500:#64748b; --slate-400:#94a3b8; --slate-300:#cbd5e1; --white:#ffffff;
+    --sky-300:#7dd3fc; --sky-400:#38bdf8; --violet-500:#8b5cf6; --pink-500:#ec4899; --cyan-500:#06b6d4; --green-500:#22c55e;
+  }
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;background:var(--slate-900);color:var(--slate-300)}
+  .container{max-width:1100px;margin:auto;padding:0 24px}
+  .header{position:sticky;top:0;z-index:30;background:rgba(10,5,20,.72);backdrop-filter:blur(8px);border-bottom:1px solid #0a0514}
+  .row{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+  h1{color:#fff;font-weight:800;margin:0;font-size:24px}
+  .grad{background:linear-gradient(90deg,var(--sky-400),var(--violet-500));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .btn{display:inline-block;padding:10px 16px;border-radius:12px;background:linear-gradient(90deg,var(--sky-400),var(--violet-500));color:#fff;font-weight:700;text-decoration:none; margin: 5px;}
+  .nav-links a + a { margin-left: 12px; } /* Style for spacing nav buttons */
+  .section{padding:68px 0}
+  .title{color:#fff;font-weight:900;margin:0 0 8px;font-size:40px;text-align:center;letter-spacing:-.02em}
+  .subtitle{max-width:860px;margin:0 auto;color:var(--slate-300);text-align:center}
+  .card{background:var(--slate-800);border:1px solid #150f24;border-radius:16px;padding:24px}
+  .grid{display:grid;gap:24px}
+  @media(min-width:920px){.grid-3{grid-template-columns:2fr 1fr}.grid-4{grid-template-columns:repeat(4,1fr)}.grid-3eq{grid-template-columns:repeat(3,1fr)}}
+  h2{color:#fff;margin:0 0 10px;font-size:28px}
+  h3{color:#fff;margin:0 0 10px;font-size:22px}
+  ul{padding-left:18px;margin:0}
+  li{margin:6px 0}
+  /* --- Style for hyperlinked items --- */
+  .hyperlinked-item {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease-in-out;
+  }
+  .hyperlinked-item:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+    color: var(--sky-300);
+  }
+  .muted{color:var(--slate-500);font-size:12px}
+  .footer{border-top:1px solid #1a1329;color:var(--slate-500);text-align:center;padding:32px 0;margin-top:48px}
+  .sub-section {
+      padding-top: 32px;
+      padding-bottom: 32px;
+  }
+  .sub-heading {
+    color: #fff;
+    font-weight: 800;
+    font-size: 24px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid var(--slate-700);
+    padding-bottom: 8px;
+  }
+  .article-card {
+      background: var(--slate-800);
+      border: 1px solid var(--slate-700);
+      border-radius: 12px;
+      padding: 24px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+  .article-card h4 {
+      color: var(--sky-300);
+      font-weight: 700;
+      font-size: 18px;
+  }
+  .article-card p {
+      margin-top: 8px;
+      font-size: 14px;
+      line-height: 1.5;
+  }
+
+    /* Mobile Responsive Styles */
+    @media (max-width: 768px) {
+        .row {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        h1 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .nav-links {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 8px;
+        }
+        .nav-links .btn {
+            width: 100%;
+            text-align: center;
+            padding: 12px;
+            font-size: 14px;
+        }
+        .container {
+            padding: 0 16px;
+        }
+    }
+    
+</style>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+  <header class="sticky top-0 z-50 backdrop-blur-lg border-b border-slate-800" style="background-color: rgba(10, 5, 20, 0.7) !important;">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="text-2xl font-bold cursor-pointer" onclick="window.location.href='https://microdos2.github.io/Consumer-Direct-B2C/'"><span class="text-[#44f80c]">micro</span><span class="text-[#9a02d0]">DOS</span><span class="text-[#ff66c4]">(2)</span></div>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center space-x-8">
+            <a href="https://microdos2.github.io/Consumer-Direct-B2C/" class="text-slate-300 hover:text-white transition-colors">Home</a>
+                <a href="UserStoriespage.html" class="text-slate-300 hover:text-white transition-colors">User Experiences</a>
+                <a href="ARTICLESANDSTUDIES.html" class="text-slate-300 hover:text-white transition-colors">Articles</a>
+                <a href="#studies" class="text-slate-300 hover:text-white transition-colors">Studies</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Mobile Navigation Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 backdrop-blur-lg border-t border-slate-800">
+        <div class="container mx-auto px-6 py-4 flex flex-col space-y-4">
+                        <a href="https://microdos2.github.io/Consumer-Direct-B2C/" class="text-slate-300 hover:text-white transition-colors py-2">Home</a>
+            <a href="UserStoriespage.html" class="text-slate-300 hover:text-white transition-colors py-2">User Experiences</a>
+            <a href="ARTICLESANDSTUDIES.html" class="text-slate-300 hover:text-white transition-colors py-2">Articles</a>
+            <a href="#studies" class="text-slate-300 hover:text-white transition-colors py-2">Studies</a>
+        </div>
+    </div>
+</header>
+
+<script>
+    // Mobile menu toggle
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+        var menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+    });
+</script>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="section">
+      <div class="container">
+        <h2 class="title">Microdosing Research & Commentary</h2>
+        <p class="subtitle">An overview of recent articles, studies, and anecdotal reports on the topic of microdosing psychedelics.</p>
+      </div>
+    </section>
+
+    <!-- Articles Section -->
+    <section class="section" id="articles">
+      <div class="container">
+        <h3 class="sub-heading">Articles (All Free Access)</h3>
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+          <a href="https://www.verywellhealth.com/microdosing-5271962" target="_blank" class="hyperlinked-item">
+            <div class="article-card">
+              <h4>Microdosing: Everything You Need to Know (Verywell Health)</h4>
+              <p>A clear guide covering how microdosing works, possible mood-boosting effects, risks, and scientific skepticism.</p>
+            </div>
+          </a>
+          <a href="https://apnews.com/article/microdosing-lsd-mushrooms-psychedelic-psilocybin-390c99ba54ef9d75727f39e2ec78fb34" target="_blank" class="hyperlinked-item">
+            <div class="article-card">
+              <h4>Believers say microdosing psychedelics helps them. Scientists are trying to measure the claims (AP News)</h4>
+              <p>Balances heartfelt testimonials with sober scientific perspective—highlighting anecdotal benefits and placebo considerations.</p>
+            </div>
+          </a>
+          <a href="https://coloradosun.com/2022/08/07/microdosing-shrooms-psilocybin-anxiety-depression/" target="_blank" class="hyperlinked-item">
+            <div class="article-card">
+              <h4>Eight months ago I started microdosing shrooms to relieve crippling anxiety and depression. It’s working. (The Colorado Sun)</h4>
+              <p>A deeply personal narrative describing how daily microdosing (~0.14 g psilocybin) helped the author overcome chronic anxiety and depression.</p>
+            </div>
+          </a>
+          <a href="https://www.theguardian.com/science/2019/may/03/psychedelic-drugs-women-taking-tiny-doses-hattie-garlick" target="_blank" class="hyperlinked-item">
+            <div class="article-card">
+              <h4>“It makes me enjoy playing with the kids”: is microdosing mushrooms going mainstream? (The Guardian)</h4>
+              <p>Rosie’s story of tiny dosing (~0.12 g) reveals newfound calm, confidence, and presence—without discernible intoxication.</p>
+            </div>
+          </a>
+          <a href="https://www.news-medical.net/health/Microdosing-for-Mental-Health-Hype-or-Hope.aspx" target="_blank" class="hyperlinked-item">
+            <div class="article-card">
+              <h4>Microdosing for Mental Health: Hype or Hope? (News-Medical)</h4>
+              <p>Examines the neurobiological mechanisms—such as 5-HT2A receptor engagement—and weighs self-reported cognitive benefits against the lack of robust clinical consensus.</p>
+            </div>
+          </a>
+          <a href="https://news.ok.ubc.ca/2025/12/11/ubco-study-finds-microdosing-can-temporarily-improve-mood-creativity/" target="_blank" class="hyperlinked-item">
+            <div class="article-card">
+              <h4>UBCO study finds microdosing can temporarily improve mood, creativity (UBC News)</h4>
+              <p>Summarizes an observational daily diary study showing that perceived benefits in mood and focus are acute (occurring only on dosing days) and do not carry over to non-dosing days.</p>
+            </div>
+          </a>
+          <a href="https://www.cpr.org/2025/04/17/microdosing-health-benefits-lsd-psilocybin-research/" target="_blank" class="hyperlinked-item">
+            <div class="article-card">
+              <h4>Microdosing Health Benefits: LSD & Psilocybin Research (CPR News)</h4>
+              <p>Discusses current research on the health benefits of microdosing psychedelics, situated within the context of recent state-level legalization shifts and clinical observation.</p>
+            </div>
+          </a>
+          <a href="https://nyulangone.org/news/psychedelic-drug-therapy-may-help-treat-alcohol-addiction" target="_blank" class="hyperlinked-item">
+            <div class="article-card">
+              <h4>Psychedelic Drug Therapy May Help Treat Alcohol Addiction (NYU Langone Health)</h4>
+              <p>Highlights clinical trial results demonstrating that psilocybin-assisted therapy can significantly reduce heavy drinking days in individuals diagnosed with alcohol use disorder.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Scientific Studies Section -->
+    <section class="section" id="studies" style="padding-top:0">
+        <div class="container">
+          <h3 class="sub-heading">Scientific Studies (All Free Access)</h3>
+          <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+            <a href="https://www.nature.com/articles/s41598-021-01811-4" target="_blank" class="hyperlinked-item">
+                <div class="article-card">
+                    <h4>Scientific Reports (2021) — Adults who microdose psychedelics report health related motivations…</h4>
+                    <p>Open-access research revealing microdosers frequently cite health-driven motivations and report reduced symptoms of anxiety and depression compared to non-users.</p>
+                </div>
+            </a>
+            <a href="https://harmreductionjournal.biomedcentral.com/articles/10.1186/s12954-019-0308-4" target="_blank" class="hyperlinked-item">
+                <div class="article-card">
+                    <h4>Harm Reduction Journal (2019) — Psychedelic microdosing benefits and challenges: an empirical codebook</h4>
+                    <p>A qualitative analysis of microdosers' experiences—detailing both benefits like improved mood and challenges like physical discomfort.</p>
+                </div>
+            </a>
+            <a href="https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0211023" target="_blank" class="hyperlinked-item">
+                <div class="article-card">
+                    <h4>PLOS One (2019) — A systematic study of microdosing psychedelics</h4>
+                    <p>An observational six-week study of microdosers noting well-being gains paired with expectancy effects.</p>
+                </div>
+            </a>
+            <a href="https://www.nature.com/articles/s41598-022-14512-3" target="_blank" class="hyperlinked-item">
+                <div class="article-card">
+                    <h4>Scientific Reports (2022) — Psilocybin microdosers demonstrate greater observed improvements…</h4>
+                    <p>A longitudinal study finding small- to medium-sized improvements in mood and mental health in microdosers relative to a control group.</p>
+                </div>
+            </a>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11787777/" target="_blank" class="hyperlinked-item">
+                <div class="article-card">
+                    <h4>PMC (2025) — Mushrooms, Microdosing, and Mental Illness: The Effect of Psilocybin on Neuroinflammation</h4>
+                    <p>Analyzes how sub-hallucinogenic psilocybin targets neuroinflammation without immune suppression, acting as a serotonin agonist to increase neuroplasticity.</p>
+                </div>
+            </a>
+            <a href="https://www.psychiatrist.com/pcc/modern-psychedelic-microdosing-research-mental-health-systematic-review/" target="_blank" class="hyperlinked-item">
+                <div class="article-card">
+                    <h4>Primary Care Companion (2024) — Modern Psychedelic Microdosing Research on Mental Health: A Systematic Review</h4>
+                    <p>A systematic review evaluating reported benefits alongside challenges (e.g., physiological discomfort), highlighting the strong role of expectancy effects and the need for double-blind trials.</p>
+                </div>
+            </a>
+          </div>
+        </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div style="margin-bottom: 24px;">
+      <a href="https://microdos2.github.io/Consumer-Direct-B2C/#pricing" class="btn">Buy Now</a>
+    </div>
+    <div>
+      © 2026 microDOS(2) — All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
