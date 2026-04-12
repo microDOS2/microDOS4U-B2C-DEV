@@ -1146,6 +1146,10 @@
 
     // Open/Close Cart
     function openCart() {
+        if (cart.length === 0) {
+            showToast('Your cart is empty');
+            return;
+        }
         document.getElementById('cart-drawer').classList.add('open');
         document.getElementById('cart-overlay').classList.add('open');
         document.body.style.overflow = 'hidden';
