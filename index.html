@@ -327,7 +327,7 @@
                     <span id="cart-total" class="text-sky-400">$0.00</span>
                 </div>
             </div>
-            <button id="checkout-btn" onclick="proceedToCheckout()" class="w-full btn-primary text-white font-semibold py-4 rounded-xl shadow-lg shadow-sky-500/20 hover:shadow-sky-500/40 transition-shadow" disabled>
+            <button id="checkout-btn" onclick="proceedToCheckout()" class="w-full btn-primary text-white font-semibold py-4 rounded-xl shadow-lg shadow-sky-500/20 hover:shadow-sky-500/40 transition-all">
                 Proceed to Checkout
             </button>
             <button onclick="closeCart()" class="w-full mt-3 text-slate-400 hover:text-white py-3 text-sm font-medium transition-colors">
@@ -1084,11 +1084,6 @@
         document.getElementById('cart-subtotal').textContent = `$${subtotal.toFixed(2)}`;
         document.getElementById('cart-tax').textContent = `$${tax.toFixed(2)}`;
         document.getElementById('cart-total').textContent = `$${total.toFixed(2)}`;
-        
-        const checkoutBtn = document.getElementById('checkout-btn');
-        if (checkoutBtn) {
-            checkoutBtn.disabled = cart.length === 0;
-        }
     }
 
     // Adjust Quantity on Pricing Page
@@ -1157,6 +1152,10 @@
 
     // Proceed to Checkout
     function proceedToCheckout() {
+        if (cart.length === 0) {
+            showToast('Please add items to your cart first');
+            return;
+        }
         closeCart();
         document.getElementById('checkout').classList.remove('hidden');
         updateCheckoutSummary();
