@@ -1092,12 +1092,24 @@
             item.quantity = newQty;
             saveCart();
         }
+        
+        // Close cart if empty after quantity change
+        if (cart.length === 0) {
+            closeCart();
+            showToast('Cart is now empty');
+        }
     }
 
     // Remove from Cart
     function removeFromCart(index) {
         cart.splice(index, 1);
         saveCart();
+        
+        // Close cart if empty
+        if (cart.length === 0) {
+            closeCart();
+            showToast('Cart is now empty');
+        }
     }
 
     // Update Cart Totals
